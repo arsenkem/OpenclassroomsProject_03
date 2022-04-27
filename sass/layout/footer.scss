@@ -1,12 +1,13 @@
 
 footer{
     background-color:$footer-background;
+    background-size: contain;
     padding: 10px 30px;
     color: white;
     h2{
         font-family:"shrikhand";
         font-size: large;
-        font-weight:100;
+        
         
     }
     ul{

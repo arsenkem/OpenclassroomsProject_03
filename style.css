@@ -96,49 +96,69 @@ header .logo {
 }
 
 .loader {
-  background-color: #f7f9fa;
+  background-color: #f6f8f9;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 1;
-  opacity: 0.8;
-  animation: disappear 1s;
-  animation-fill-mode: both;
-  /* .spin {
-     width: 80px;
-     height: 80px;
-   }
-   .spin:after {
-     content: " ";
-     display: block;
-     width: 64px;
-     height: 64px;
-     margin: 8px;
-     border-radius: 50%;
-     border: 6px solid #fff;
-     border-color: rgb(103, 119, 235) transparent #fff transparent;
-     animation: spin 1s linear 4 ;
-
-   }
-
-   @keyframes spin {
-     0% {
-       transform: rotate(0deg);
-     }
-     100% {
-       transform: rotate(360deg);
-     }
-   }*/
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: disappear 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  text-align: center;
 }
-@keyframes disappear {
+.loader h2 {
+  color: #ccc;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.loader span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.6em;
+  height: 0.6em;
+  margin: 0.19em;
+  background: #FF79DA;
+  border-radius: 0.6em;
+  animation: loader 1s infinite alternate;
+}
+.loader span:nth-of-type(2) {
+  background: #99E2D0;
+  animation-delay: 0.2s;
+}
+.loader span:nth-of-type(3) {
+  background: #9356dc;
+  animation-delay: 0.4s;
+}
+.loader span:nth-of-type(4) {
+  background: #FF79DA;
+  animation-delay: 0.6s;
+}
+.loader span:nth-of-type(5) {
+  background: #99E2D0;
+  animation-delay: 0.8s;
+}
+.loader span:nth-of-type(6) {
+  background: #9356dc;
+  animation-delay: 1s;
+}
+.loader span:nth-of-type(7) {
+  background: #FF79DA;
+  animation-delay: 1.2s;
+}
+
+@keyframes loader {
   0% {
-    transform: scale(1);
+    opacity: 0;
   }
   100% {
-    transform: scale(0);
+    opacity: 1;
   }
 }
-
 /*Fonctionnement*/
 .function {
   margin: 15px;
@@ -222,6 +242,7 @@ header .logo {
 }
 @media screen and (max-width: 800px) {
   .menus .menus__cards {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -282,13 +303,13 @@ header .logo {
 
 footer {
   background-color: #353535;
+  background-size: contain;
   padding: 10px 30px;
   color: white;
 }
 footer h2 {
   font-family: "shrikhand";
   font-size: large;
-  font-weight: 100;
 }
 footer ul {
   list-style-type: none;
@@ -311,6 +332,24 @@ footer ul li i {
   100% {
     transform: translateY(0%);
     opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  0% {
+    z-index: 1;
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
   }
 }
 main {
@@ -381,7 +420,7 @@ header i {
   width: 35px;
   left: 0;
   top: 20px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   position: absolute;
 }
 .menu .menu_carte_item .card__item {
@@ -391,9 +430,9 @@ header i {
   display: flex;
   box-shadow: 2px 9px 4px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   /***caché le check***/
+  white-space: nowrap;
+  /*les passages à la ligne automatiques sont supprimés.*/
   animation: appearance 1s;
   animation-fill-mode: both;
 }
@@ -410,17 +449,7 @@ header i {
   animation-delay: 0.8s;
 }
 .menu .menu_carte_item .card__item .card__description {
-  width: 80%;
-  border: 1px solid black;
   padding: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.menu .menu_carte_item .card__item .card__description h4, .menu .menu_carte_item .card__item .card__description p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .menu .menu_carte_item .card__item .card__price {
   font-weight: bold;
@@ -430,7 +459,7 @@ header i {
   padding: 10px;
 }
 .menu .menu_carte_item .card__item .card__check {
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   width: 50px;
   margin-right: -50px;
   display: flex;
@@ -446,9 +475,6 @@ header i {
 }
 .menu .menu_carte_item .card__item:hover .card__check {
   margin-right: 0px;
-}
-.menu .menu_carte_item .card__item:hover .card__description {
-  /*width: 200px;*/
 }
 .menu .menu_carte_item .card__item:hover .fas {
   animation: spin-check 1s;
