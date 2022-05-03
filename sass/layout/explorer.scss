@@ -1,13 +1,13 @@
 @import "../utils/box-shadox.scss";
 @import "../utils/zoom.scss";
-@import"../utils/colors.scss";
+@import "../utils/colors.scss";
+
 /*Explorer*/
 .Explorer {
-    text-align: center;
-    background-color: #f8f5f5;
-    padding: 20px 30px;
-    margin-bottom: 50px;
-  
+  text-align: center;
+  background-color: #f8f5f5;
+  padding: 20px 30px;
+
   & button{
     color: white;
     font-size: small;
@@ -20,6 +20,7 @@
     @include shadow;
     &:hover{
       @include zoom;
+      cursor: pointer;
     }
   }
 }

@@ -1,15 +1,15 @@
 /*Restaurants*/
 .menus {
     background-color: #f6f6f6;
-    padding: 30px 15px 50px 15px;
+    padding: 30px 15px 70px 15px;
     
-    .menus__cards {
+    &__cards {
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        gap:2rem;
+        gap: 30px;
         @media screen and(max-width:800px) {
-            display: grid;
-        grid-template-columns:repeat(1, 1fr);
+
+         grid-template-columns:repeat(1, 1fr);
             
         }
             
@@ -17,26 +17,26 @@
         
     .card {
         position: relative;
-        border-radius: 0 0 10px 10px;
+        border-radius: 0 0 20px 20px;
         background-color: white;
-        
-        
+        @include shadow;
         &__btn{
             .new {
                 color: #008766;
                 background: #99E2D0;
-                font-size: x-small;
+                font-size: small;
                 font-weight: bold;
                 position: absolute;
                 right: 3%;
                 top: 5%;
-                padding: 5px 10px;
-              }
+                padding: 10px 15px;
+            }
         } 
         &__image {
             background-size: cover;
+            background-position: center;
             width: 100%;
-            height: 140px;
+            height: 200px;
             border-radius: 10px 10px 0 0;
         }
         &__image-1{
@@ -61,7 +61,7 @@
                 justify-content: space-between;
                 align-items: center;
                 padding:10px 15px 10px 10px  ;
-                
+        
                 &__icon{
                     .fill {
                         font-size:25px;
@@ -77,11 +77,7 @@
                         }
                     }
                 }
-              
-              }
-                
-
-            
+            }
         }
     }
     

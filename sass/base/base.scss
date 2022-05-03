@@ -11,7 +11,6 @@
 }
 
 body{
-   
     margin:0px;
     font-family:"Roboto";
 }
@@ -19,18 +18,18 @@ body{
 h2{
     font-size: x-large;
     font-weight: bold;
-    padding:1Opx;
-    margin :18px 0;
+    padding: 8px;
+    margin :10px 0px;
 }
+
 h3 ,p{
-    font-size: small;
-    margin: 0;
-    
+    font-size:large;
+    margin: 0;  
 }
 h4{
     margin: 0px;
-
 }
+
 main{
     margin: 20px; 
     @media screen and(max-width:800px){

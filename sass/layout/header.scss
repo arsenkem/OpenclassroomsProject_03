@@ -1,13 +1,16 @@
 /*Header*/
 
 header {
-    padding: 10px 0;
-    box-shadow:0px 2px 3px  #ddd8d8; 
-    position: relative; 
+  padding: 10px 0;
+  box-shadow:0px 2px 3px  #ddd8d8; 
+  position: relative; 
     & .logo {
       display: flex;
       justify-content: center;
       align-items: center; 
+      img {
+         width: 150px;
+      }
     }
   }
   
