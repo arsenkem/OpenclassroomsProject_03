@@ -178,6 +178,7 @@ header .logo img {
 @media screen and (max-width: 908px) {
   .function ul {
     flex-direction: column;
+    padding-right: 10px;
   }
 }
 .function ul li {

@@ -16,6 +16,7 @@
         counter-reset: compteliste;
         @media screen and (max-width :908px){
         flex-direction: column;
+        padding-right: 10px;
         }
         & li{
             position: relative;
