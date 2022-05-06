@@ -12,7 +12,7 @@ header{
         display: flex; 
         top:35%;
         left:20px;  
-        font-weight: 12px;
+        font-weight: normal;
     } 
 }
 
@@ -42,7 +42,7 @@ header{
         .heart__icon{
             .fill {
                 font-size:25px;
-                font-weight: 5px;
+                font-weight:normal;
                 padding-right:10px;
                 cursor: pointer;
                 &:hover {
