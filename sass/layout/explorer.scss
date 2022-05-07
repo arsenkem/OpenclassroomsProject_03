@@ -18,12 +18,16 @@
     border-radius: 30px;
     background-image : linear-gradient(to left top,#9356DC ,#FF79DA ); 
     @include shadow;
+    filter: brightness(.8);
+    transition:filter 0.5s ease; 
     &:hover{
       @include zoom;
+      filter: brightness(1);
       cursor: pointer;
     }
   }
 }
+/*Loader*/
 .loader{
   background-color:hsl(200, 23%, 97%);
   height: 100%;
@@ -37,13 +41,6 @@
   animation:disappear 2s ;
   animation-fill-mode:forwards;
   animation-delay: 5s;
-  text-align: center;
-  h2 {
-    color: #ccc;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-  }
   span {
     display: inline-block;
     vertical-align: middle;

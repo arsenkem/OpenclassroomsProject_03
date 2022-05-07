@@ -92,12 +92,16 @@ header .logo img {
   border-radius: 30px;
   background-image: linear-gradient(to left top, #9356DC, #FF79DA);
   box-shadow: 8px 6px 6px rgba(0, 0, 0, 0.2);
+  filter: brightness(0.8);
+  transition: filter 0.5s ease;
 }
 .Explorer button:hover {
   transform: scale(1, 1.1);
+  filter: brightness(1);
   cursor: pointer;
 }
 
+/*Loader*/
 .loader {
   background-color: #f6f8f9;
   height: 100%;
@@ -111,13 +115,6 @@ header .logo img {
   animation: disappear 2s;
   animation-fill-mode: forwards;
   animation-delay: 5s;
-  text-align: center;
-}
-.loader h2 {
-  color: #ccc;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 .loader span {
   display: inline-block;
@@ -528,10 +525,13 @@ header i {
   border-radius: 30px;
   background-image: linear-gradient(to left top, #9356DC, #FF79DA);
   box-shadow: 8px 6px 6px rgba(0, 0, 0, 0.2);
+  filter: brightness(0.8);
+  transition: filter 0.5s ease;
 }
 .order button:hover {
   transform: scale(1, 1.1);
   cursor: pointer;
+  filter: brightness(1);
 }
 @media (max-width: 768px) {
   .order {
